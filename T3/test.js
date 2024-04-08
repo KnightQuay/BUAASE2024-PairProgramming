@@ -1,17 +1,18 @@
 import assert from "assert";
 
 // Choose proper "import" depending on your PL.
-import { mancalaOperator as op1 } from "./t3-2-as/build/release.js";
+// import { mancalaOperator as op1 } from "./mid_pk1.js";
+import { mancalaOperator as op1 } from "./t3-2-c/mid_operator.js";
 // import { mancala_operator as op1 } from "./t3_2_rust/pkg/t3_2_rust.js"
 // [Write your own "import" for other PLs.]
 
 // Choose proper "import" depending on your PL.
-import { mancalaOperator as op2 } from "./t3-2-as-rival/build/release.js";
+import { mancalaOperator as op2 } from "./t3-2-c-rival/build/bridge.js";
 // import { mancala_operator as op2 } from "./t3_2_rust_rival/pkg/t3_2_rust.js"
 // [Write your own "import" for other PLs.]
 
 // Choose proper "import" depending on your PL.
-import { mancalaBoard as board } from "./t3-1-as/build/release.js";
+import { mancalaBoard as board } from "./t3-1-c/mid_board.js";
 // import { mancala_board as board } from "./t3_1_rust/pkg/t3_1_rust.js"
 // [Write your own "import" for other PLs.]
 
@@ -25,6 +26,7 @@ status = [4,4,4,4,4,4,0,4,4,4,4,4,4,0];
 operation = 0;
 operationSequence = [];
 isEnded = false;
+
 
 do {
     if (operator == 1) {
@@ -52,6 +54,7 @@ do {
         op2Result -= boardReturn[14] - 200;
     }
 } while (!isEnded);
+
 
 // Now change to start from op2.
 operator = 2;
